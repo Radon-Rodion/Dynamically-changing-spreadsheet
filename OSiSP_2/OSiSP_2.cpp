@@ -8,13 +8,13 @@
 #define IDM_CODE_SAMPLES 101
 
 #define N_COLUMNS 3
-#define WORD_LENGTH 70
+#define WORD_LENGTH 130
 #define N_ROWS 3
 
 TCHAR colNames[N_COLUMNS][WORD_LENGTH] = { L"ID", L"Name", L"Quotation"};
-TCHAR data[N_ROWS][N_COLUMNS][WORD_LENGTH] = { {L"0", L"Dima Grach", L"Ich sage dich thus Ich wirde sage dich thus Ich wirde mache es"},
-    {L"1", L"Vova Putin", L"I say you that I will say you that I will do it"},
-    {L"2", L"Sergey Sobyanin", L"Я говорю тебе что я буду говорить тебе что я сделаю это"}
+TCHAR data[N_ROWS][N_COLUMNS][WORD_LENGTH] = { {L"0", L"Dima Grach", L"Ich sage dich thus Ich wirde sage dich thus Ich wirde mache es jetzt. Unt zie hast sagen thus zie wirst mich antworten nicht"},
+    {L"1", L"Vova Putin", L"I say you that I will say you that I will do it now. And she has said that she will not answer me."},
+    {L"2", L"Sergey Sobyanin", L"Я говорю тебе что я буду говорить тебе что я сделаю это. А она сказала, что не ответит мне"}
 };
 
 // Глобальные переменные:
@@ -115,7 +115,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    hInst = hInstance; // Сохранить маркер экземпляра в глобальной переменной
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
-      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+       0, 0, 1600, 850, nullptr, nullptr, hInstance, nullptr);
 
    if (!hWnd)
    {
